@@ -1,0 +1,20 @@
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+    <div class="card bg-light p-4">
+      <div class="container mt-5">
+        <ul *ngIf="messages" class="list-group">
+          <li *ngFor="let message of messages" class="list-group-item bg-success text-white mb-2">{{message}}</li>
+        </ul>
+      </div>
+      <div class="container mt-3">
+        <form>
+          <div class="input-group">
+            <input name="message" [(ngModel)]="message" type="text" class="form-control" placeholder="Escribe tu mensaje" aria-label="Escribe tu mensaje" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="sendMessage()">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+  
